@@ -1,5 +1,5 @@
 {
-  "name": "ternssh",
+  "name": "ternssh-cloudflare-workers-template",
   "private": true,
   "license": "GPL-3.0-or-later",
   "scripts": {

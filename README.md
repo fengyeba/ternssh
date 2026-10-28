@@ -1,6 +1,6 @@
 # ternssh Cloudflare Workers Template
 
-Prebuilt deploy snapshot from [haradakashiwa/ternssh](https://github.com/haradakashiwa/ternssh) **v0.0.11**.
+Prebuilt deploy snapshot from [haradakashiwa/ternssh](https://github.com/haradakashiwa/ternssh) **v0.0.13**.
 
 Use this repository for Cloudflare Workers one-click deploy and Workers Builds. Frontend assets are already built; `npm run build` is a no-op.
 
@@ -17,4 +17,4 @@ Ensure a remote D1 database named `ternssh` exists, or set `D1_DATABASE_ID` in b
 
 ## Source
 
-Generated automatically from `haradakashiwa/ternssh` tag `v0.0.11`. Do not edit by hand.
+Generated automatically from `haradakashiwa/ternssh` tag `v0.0.13`. Do not edit by hand.

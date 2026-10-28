@@ -43,8 +43,8 @@ export function serializePrivateKeyCredential(
 function readOpenSSHCipher(privateKey: string): string | null {
   if (!privateKey.includes("BEGIN OPENSSH PRIVATE KEY")) return null;
   try {
-    const lines = privateKey.trim().split("\n");
-    const b64 = lines.filter((line) => !line.startsWith("-----")).join("");
+    const lines = privateKey.replace(/\r\n/g, "\n").replace(/\r/g, "\n").trim().split("\n");
+    const b64 = lines.filter((line) => !line.startsWith("-----")).join("").replace(/\s+/g, "");
     const raw = Uint8Array.from(atob(b64), (char) => char.charCodeAt(0));
     const magic = new TextEncoder().encode("openssh-key-v1\0");
     if (raw.length < magic.length + 8) return null;

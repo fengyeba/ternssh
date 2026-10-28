@@ -185,7 +185,7 @@ export function unauthorizedResponse(
 ): Response {
   const headers = new Headers();
   if (error.challenge === "basic") {
-    headers.set("WWW-Authenticate", 'Basic realm="ternssh"');
+    headers.set("WWW-Authenticate", 'Basic realm=""');
   }
   if (error.status === 429 && error.retryAfterSeconds) {
     headers.set("Retry-After", String(error.retryAfterSeconds));
